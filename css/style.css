@@ -1,0 +1,30 @@
+html {
+	width: 800px;
+	margin: 0 auto;
+    font-family:  "Helvetica Neue", "Helvetica", "Sans-Serif";
+}
+#body {
+	padding-left: 400px;
+	padding-top: 100px;
+}
+#menuWrap {
+	margin: 0 auto;
+	text-align: center;
+}
+button#newGame {
+    font-size: 20px;
+    border: 0;
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+}
+#round {
+    text-align: right;
+    display: none;
+}
+input[value="="] {
+	background-color: grey;
+}
+#error {
+	display: none;
+}
