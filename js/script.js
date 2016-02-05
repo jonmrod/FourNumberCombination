@@ -1,18 +1,36 @@
-answer = 0;
-
-$(document).on('click', "#newGame", function() {
-	start();
-
-});
-
-function start() {
-	answer = 1;
+var game = {
+    answer: 0,
+    chances: 3,
 }
 
-function nextRound() {
-	$("#round").text(answer++);
-}
+$(document).ready(function() {
+    $("#newGame").click(function() {
+        start();
+    });
+    });
+    function start() {
+        $("#round").text(game.answer = 1);
+        $("#error").hide('slow/400/fast', function() {
+        	
+        });
+        $("#round").show();
+        nextRound();
+    }
 
-function checkAnswer() {
+    function nextRound() {
+        $("#chances").text(game.chances = 3);
+        $("[round]").text(++game.answer);
 
-}
+    }
+    function checkAnswer() {
+    	if (calc.display.value.length < 7) {
+    	$("#error").show();
+    	}
+    	else{
+    	calc.display.value=eval(calc.display.value);
+    	}
+    }
+    $("#body").click(function() {
+    	$("#error").hide();
+    });
+
