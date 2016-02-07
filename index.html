@@ -9,10 +9,13 @@
 </head>
 
 <body>
-    <div id="body">
-        <div id="attempt"></div>
-        <span round="0">0</span>
+    <div id="menuWrap">
         <button id="newGame">Start</button>
+        <div id="chances"></div>
+        <div id="error">Pick at least 4 numbers!</div>
+    </div>
+    <div id="body">
+        <div id="guess">?</div>
         <form Name="calc">
             <table border=0>
                 <tr>
@@ -76,9 +79,9 @@
                 </tr>
             </table>
         </form>
+        <div id="round"></div>
     </div>
-    <input type=button value="=" OnClick="calc.display.value=eval(calc.display.value)">
+    <input type=button value="=" onclick="checkAnswer()">
 </body>
 
 </html>
-
