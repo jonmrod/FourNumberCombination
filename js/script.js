@@ -1,6 +1,7 @@
 var game = {
     answer: 0,
     chances: 3,
+    previousAnswer: 0,
 }
 
 $(document).ready(function() {
@@ -8,11 +9,7 @@ $(document).ready(function() {
     $("#newGame").click(function() {
         $("input[type=text]").val("");
         $("input[type=button], input[type=text]").removeAttr('disabled');
-        $(this).animate({
-            "right": "0"
-        }, {
-            duration: 400
-        });
+        $(this).animate({"right": "0"}, {duration: 400});
         start();
     });
 });
@@ -33,20 +30,32 @@ function nextRound() {
 }
 
 function checkAnswer() {
+	/*
+	if (calc.display.value == game.previousAnswer) {
+}
+	else {
+		$("input[type=text]").val("");
+}
+*/
+	$("#guess").text(eval(calc.display.value));
     if (game.chances > 1) {
         if (calc.display.value.length < 7) {
-            $("#error").show().delay(200).fadeOut();;
-        } else if (calc.display.value == game.answer) {
+            $("#error").show().delay(400).fadeOut();
+        } else if (eval(calc.display.value) == game.answer) {
             calc.display.value = eval(calc.display.value);
+            nextRound();
         } else {
             $("#chances").text(--game.chances);
         }
     } else {
-        //gameover
+        gameOver();
     }
 }
 
-$("#body").click(function() {
-    $("#error").hide();
-});
+function gameOver() {
+	$("round").hide();
+	$("guess").text("?");
+
+}
+
 
