@@ -45,6 +45,7 @@ function checkAnswer() {
             calc.display.value = eval(calc.display.value);
             nextRound();
         } else {
+        	$("input[type=text]").val("");
             $("#chances").text(--game.chances);
         }
     } else {
