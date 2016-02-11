@@ -22,20 +22,24 @@ button#newGame:active {
 	background-color: #BDBDBD;
 }
 #guess {
+	display: none;
+	position: absolute;
+	font-size: 100px;
 	float: left;
 }
 form[name="calc"] {
 	display: none;
-	margin: 0 auto;
-}
-#guess {
-	display: none;
+	width: 137px;
+    margin-left: auto;
+    margin-right: auto;
 }
 #round {
+	display: none;
+	float: right;
+	font-size: 100px;
     display: none;
 }
 input[value="="] {
-	position: absolute;
 	background-color: grey;
 }
 #error {
