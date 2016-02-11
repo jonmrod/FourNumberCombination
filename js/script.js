@@ -7,6 +7,7 @@ var game = {
 $(document).ready(function() {
     $("input[type=button], input[type=text]").attr('disabled', true);
     $("#newGame").click(function() {
+    	$("form[name='calc']").show('slow/400/fast');
         $("input[type=text]").val("");
         $("input[type=button], input[type=text]").removeAttr('disabled');
         $(this).animate({"right": "0"}, {duration: 400});
@@ -17,9 +18,7 @@ $(document).ready(function() {
 function start() {
     $("#newGame").text("Restart");
     $("#round").text(game.answer = 1);
-    $("#error").hide('slow/400/fast', function() {
-
-    });
+    $("#error").hide('slow/400/fast');
     $("#round").show();
     nextRound();
 }
