@@ -25,6 +25,7 @@ button#newGame:active {
 	float: left;
 }
 form[name="calc"] {
+	display: none;
 	margin: 0 auto;
 }
 #round {
