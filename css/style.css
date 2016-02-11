@@ -4,11 +4,11 @@ html {
     font-family:  "Helvetica Neue", "Helvetica", "Sans-Serif";
 }
 #body {
-	padding-left: 400px;
+	width: 500px;
+	margin: 0 auto;
 	padding-top: 100px;
 }
 #menuWrap {
-	margin: 0 auto;
 	text-align: center;
 }
 button#newGame {
@@ -18,11 +18,20 @@ button#newGame {
     color: white;
     padding: 10px 20px;
 }
+button#newGame:active {
+	background-color: #BDBDBD;
+}
+#guess {
+	float: left;
+}
+form[name="calc"] {
+	margin: 0 auto;
+}
 #round {
-    text-align: right;
     display: none;
 }
 input[value="="] {
+	position: absolute;
 	background-color: grey;
 }
 #error {
