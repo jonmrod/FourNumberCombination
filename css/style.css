@@ -28,6 +28,9 @@ form[name="calc"] {
 	display: none;
 	margin: 0 auto;
 }
+#guess {
+	display: none;
+}
 #round {
     display: none;
 }
